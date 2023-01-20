@@ -5,6 +5,7 @@ void intro();
 void check();
 void login();
 void convert();
+void insert();
 void intro()
 {
 	printf("     	\t\t\tHELLO THERE! WELCOME TO SPEECH TO TEXT CONVERTER\n");
@@ -52,6 +53,19 @@ void login()
 	printf("*********************************************************************\n");
 	fclose(p);
 }
+void insert()
+{
+	FILE *d;
+	char ch,n[30],s[20],c[20],mob[10];
+	d=fopen("F:\\Filehandling prog.s of c\\12.txt","r");
+	printf("The Record Entered- ");
+	while((ch=getc(d))!=EOF)
+	{
+		printf("%c",ch);
+	}
+	fclose(d);
+	printf("*********************************************************************\n");
+}
 void convert()
 {
 	float l;
@@ -67,5 +81,6 @@ void main()
 {
 	intro();
 	check();
+	insert();
 	convert();
 }
